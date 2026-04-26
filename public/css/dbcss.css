@@ -1,0 +1,217 @@
+:root {
+    --color-primary: #1F451A; 
+    --color-secondary: #D4EDC1; 
+    --color-card-feature: #35624A; 
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --card-radius: 12px;
+    --gap-spacing: 20px;
+}
+
+body {
+    background-color: #F8F9FA; 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+.agrisense-header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 15px var(--gap-spacing);
+    border-radius: var(--card-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.agrisense-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.agrisense-nav a {
+    color: var(--color-text-light);
+    margin-left: var(--gap-spacing);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Card General */
+.agrisense-card {
+    background-color: #fff;
+    border-radius: var(--card-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: var(--gap-spacing);
+    margin-bottom: var(--gap-spacing);
+    text-align: center;
+    border: none;
+}
+
+/* Weather Section */
+.card-weather-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-dark);
+    padding: 30px;
+    height: 100%;
+}
+
+.weather-value {
+    font-size: 3rem; 
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Forecast Responsif */
+.card-daily-forecast {
+    background-color: var(--color-secondary);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.daily-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12%; 
+    min-width: 80px; 
+}
+
+.card-feature {
+    background-color: var(--color-card-feature);
+    color: var(--color-text-light);
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--gap-spacing);
+    text-decoration: none;
+}
+
+.card-feature .title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.card-feature .btn-buka {
+    background-color: #A0C389; 
+    color: var(--color-primary);
+    border: none;
+    padding: 8px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.col-lg-4, .col-md-6, .col-sm-12 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footer-custom {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-logo-container {
+    background: white;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 100%;
+    max-width: 180px;
+}
+
+.footer-logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+.footer-info h6 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.footer-info p, .footer-info span {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.footer-social-links a {
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+.footer-social-links a:hover {
+    transform: scale(1.1);
+    color: var(--color-secondary);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.footer-bottom a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin: 0 10px;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .agrisense-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .agrisense-nav a {
+        margin: 0 10px;
+    }
+
+    .daily-item {
+        width: 30%;
+    }
+
+    .weather-value {
+        font-size: 2.2rem;
+    }
+    .footer-info {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .footer-social-links {
+        justify-content: center;
+        display: flex;
+    }
+}
