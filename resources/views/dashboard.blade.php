@@ -103,6 +103,15 @@
                 <a href="{{ route('hpt.index') }}" class="btn-buka">Buka</a>
             </div>
         </div>
+
+        {{-- Pembelian bibit  HPT --}}
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+            <div class="agrisense-card card-feature text-center">
+                <div class="title">Pembelian Bibit HPT</div>
+                <i class="fas fa-seedling fa-2x mb-2"></i> 
+                <a href="{{ route('bibit.index') }}" class="btn-buka">Buka</a>
+            </div>
+        </div>
         
         
     </div>

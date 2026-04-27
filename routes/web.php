@@ -9,6 +9,7 @@ use App\Http\Controllers\WeatherController;
 use App\Http\Controllers\LaporanPanenController;
 use App\Http\Controllers\HelpDeskController;
 use App\Http\Controllers\PerawatanHPTController;
+use App\Http\Controllers\BibitController;
 
 // Rute Default
 Route::get('/', function () {
@@ -77,3 +78,7 @@ Route::post('/perawatan-hpt', [PerawatanHPTController::class, 'store'])->name('h
 
 Route::get('/laporan-panen', [LaporanPanenController::class, 'index'])->name('laporan.index');
 Route::post('/input-panen', [App\Http\Controllers\LaporanPanenController::class, 'store'])->name('panen.store');
+
+Route::get('/beli-bibit', [BibitController::class, 'index'])->name('bibit.index');
+Route::post('/checkout-bibit', [BibitController::class, 'checkout'])->name('bibit.checkout');
+Route::post('/midtrans-callback', [BibitController::class, 'callback']);    
