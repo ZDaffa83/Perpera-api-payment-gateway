@@ -10,6 +10,7 @@ use App\Http\Controllers\LaporanPanenController;
 use App\Http\Controllers\HelpDeskController;
 use App\Http\Controllers\PerawatanHPTController;
 use App\Http\Controllers\BibitController;
+use App\Http\Controllers\InventarisBibitController;
 
 // Rute Default
 Route::get('/', function () {
@@ -81,4 +82,19 @@ Route::post('/input-panen', [App\Http\Controllers\LaporanPanenController::class,
 
 Route::get('/beli-bibit', [BibitController::class, 'index'])->name('bibit.index');
 Route::post('/checkout-bibit', [BibitController::class, 'checkout'])->name('bibit.checkout');
-Route::post('/midtrans-callback', [BibitController::class, 'callback']);    
+Route::post('/midtrans-callback', [BibitController::class, 'callback']); 
+Route::get('/tambah-bibit', [BibitController::class, 'create'])->name('bibit.create');
+Route::post('/tambah-bibit', [BibitController::class, 'store'])->name('bibit.store');   
+Route::get('/bibit/{id}/edit', [BibitController::class, 'edit'])->name('bibit.edit');
+Route::put('/bibit/{id}', [BibitController::class, 'update'])->name('bibit.update');
+Route::delete('/bibit/{id}', [BibitController::class, 'destroy'])->name('bibit.destroy');
+
+Route::get('/admin/bibit-auth', [BibitController::class, 'enterCode'])->name('bibit.auth');
+Route::post('/admin/bibit-verify', [BibitController::class, 'verifyCode'])->name('bibit.verify');
+
+Route::get('/inventaris-bibit', [InventarisBibitController::class, 'index'])->name('inventaris.index');
+Route::get('/inventaris-bibit/tambah', [InventarisBibitController::class, 'create'])->name('inventaris.create');
+Route::post('/inventaris-bibit', [InventarisBibitController::class, 'store'])->name('inventaris.store');
+Route::get('/inventaris-bibit/{id}/edit', [InventarisBibitController::class, 'edit'])->name('inventaris.edit');
+Route::put('/inventaris-bibit/{id}', [InventarisBibitController::class, 'update'])->name('inventaris.update');
+Route::delete('/inventaris-bibit/{id}', [InventarisBibitController::class, 'destroy'])->name('inventaris.destroy');

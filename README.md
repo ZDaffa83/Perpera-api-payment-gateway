@@ -43,6 +43,7 @@ Instal semua package yang dibutuhkan menggunakan Composer:
 
 ```bash
 composer install
+composer require midtrans/midtrans-php
 
 ```
 
@@ -73,8 +74,6 @@ php artisan db:seed --class=RiwayatTanamSeeder
 
 ```
 
----
-
 Terakhir, tinggal jalankan website dengan :
 
 ```bash
@@ -82,6 +81,12 @@ php artisan serve
 
 ```
 web bisa diakses melalui browser di: `http://127.0.0.1:8000`
+
+Karena Project ini terintegrasi dengan MidtTrans, silahkan sesuaikan kode Midclient dan Midserver di env anda, contoh yang ada di .env.example di line paling bawah dengan kode Midclient dan Midserver yang ada di akun midtrans anda mode sandbox
+
+Setelah itu, Porting aplikasi dengan Ngrok, dan salin URL nya. 
+contoh Salin URL HTTPS dari Ngrok (misal: https://abcd-123.ngrok-free.app) dan masukkan ke Dashboard Midtrans Sandbox > Settings > Configuration: https://abcd-123.ngrok-free.app/midtrans-callback 
+agar status payment succesfull dari databse berhasil di panggil dari MidTrans.
 
 ---
 

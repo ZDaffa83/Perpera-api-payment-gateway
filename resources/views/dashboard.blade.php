@@ -112,6 +112,15 @@
                 <a href="{{ route('bibit.index') }}" class="btn-buka">Buka</a>
             </div>
         </div>
+
+        {{-- Inventaris bibit  HPT --}}
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+            <div class="agrisense-card card-feature text-center">
+                <div class="title">Inventaris Bibit HPT</div>
+                <i class="fas fa-warehouse fa-2x mb-2"></i> 
+                <a href="{{ route('inventaris.index') }}" class="btn-buka">Buka</a>
+            </div>
+        </div>
         
         
     </div>

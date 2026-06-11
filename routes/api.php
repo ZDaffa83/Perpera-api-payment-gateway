@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\PostmangApiController;
+use App\Http\Controllers\BibitController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -15,3 +16,5 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/weather', [PostmangApiController::class, 'index']);
 Route::post('/weather', [PostmangApiController::class, 'store']);
+
+Route::post('/midtrans-callback', [BibitController::class, 'callback']);
